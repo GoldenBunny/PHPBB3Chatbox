@@ -1,0 +1,6 @@
+{
+	"host":		"*MYSQL HOST*",
+	"username":	"*MYSQL USERNAME*",
+	"password":	"*MYSQL PASSWORD*",
+	"database":	"*CHAT DATABASE*"
+}

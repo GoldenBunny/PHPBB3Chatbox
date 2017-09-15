@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xbbcode.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+  <ul id="user-column" class="side-nav fixed">
+    <li><div class="userView">
+          <img class="background" src="https://tgmbrasil.com.br/styles/canvas/theme/images/backgrounds/background.jpg">
+          <img class="circle userView-avatar" src="https://tgmbrasil.com.br/download/file.php?avatar=1081_1463425714.jpg">
+          <div class="white-text name userView-container">
+            <span class="userView-name">Led</span>
+            <br>
+            <em class="userView-rank">Moderador</em>
+          </div>
+        </div>
+    </li>
+
+    <li><a class="subheader">Usuários Ativos</a></li>
+
+   <!-- <li class="user-list-child">
+      <a class="waves-effect" href="#!">
+
+      <img src="https://tgmbrasil.com.br/download/file.php?avatar=1074_1473025794.gif" alt="" class="circle user-list-avatar">
+      <span class="user-list-name">Led</span>
+      <i class="small secondary-content material-icons teal-text" style="position:relative;top:-5px;float:right;">&#9679;<img src="img/pencil.gif"  style="width:1.8rem;height:1.8rem;" alt=""></i>
+
+      </a>
+    </li> -->
+
+  </ul>
+
+<div class="main grey lighten-4">
+
+<div class="main-top light-blue darken-3 z-depth-1">
+<marquee class="promise-list">
+
+  <em>"O chat novo vai ser terminado esse ano"</em> - <b>Markito, 2016</b>
+  |
+  <em>"Eu ainda vou terminar um jogo em Assembly."</em> - <b>SuperBomber, 2016</b>
+  </marquee>
+
+  <div class="fixed-action-btn click-to-toggle options-button">
+    <a class="btn-floating btn-large teal lighten-2">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" ><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="message-column" id="message_list_column">
+
+<ul class="collection" id="message-collection">
+
+</ul>
+</div>
+
+<div class="main-bottom light-blue darken-3 z-depth-1">
+
+  <div class="row">
+
+      <form id="formdefault">
+      <div class="input-field col s11" style="width:95%;">
+          <input id="inputdefault" type="text" autocomplete="off">
+        <label for="message">Mensagem</label>
+      </div>
+      </form>
+
+    <div class="col s1">
+      <a class="btn-floating btn-large waves-effect waves-light light-blue darken-3 emoji-button" id="Robson">
+        <img src="img/emoji.svg"  alt="Emoji">
+      </a>
+
+    </div>
+
+    </div>
+
+</div>
+
+</div>
+    <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+    <script src="https://use.fontawesome.com/c35e7d92b0.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+
+    <script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="js/messages.js"></script>
+    <script type="text/javascript" src="js/user_on.js"></script>
+    <script type="text/javascript" src="js/emoticons.js"></script>
+    <script type="text/javascript" src="js/xbbcode.js"></script>
+    <!-- <script type="text/javascript" src="js/image-upload.js"></script> -->
+
+
+</body>
+
+
+<template name="message">
+
+  <li class="collection-item avatar message">
+       <img src={{_avatar}} alt="" class="circle message-avatar">
+
+       <div class="message-header">
+         <span class="title message-name" style={{_color}}>{{_user}}</span>
+         <span class="message-hour">{{_date}}</span>
+      </div>
+
+      <div class="message-content">
+       <p class="message-line" id={{_msgid}}>
+         {{_text}}
+       </p>
+     </div>
+
+     </li>
+
+</template>
+
+<template name="message-line">
+
+  <p class="message-line" id={{_msgid}}>
+    {{_text}}
+  </p>
+
+</template>
+
+<template name="user-list-child">
+
+<li class="user-list-child">
+  <a class="waves-effect" href="#!">
+
+  <img src={{_avatar}} alt="" class="circle user-list-avatar">
+  <span class="user-list-name" style={{css_style}}>{{_user}}</span>
+  <i class="small secondary-content material-icons teal-text" style="position:relative;top:-5px;float:right;">&#9679;<img src="img/pencil.gif"  style="width:1.8rem;height:1.8rem; opacity:0;" alt=""></i>
+
+  </a>
+</li>
+
+</template>
+
+
+</html>

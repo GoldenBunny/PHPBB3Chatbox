@@ -1,0 +1,6 @@
+{
+	"header": 		"*MENSAGEM LOCALIZADA NO TOPO DO CHAT*",
+	"min_posts": 	"*NÚMERO MÍNIMO DE POSTS PARA ENTRAR NO CHAT*",
+	"forum_url": 	"*URL DO FÓRUM*",
+	"port":			"*PORTA DA APLICAÇÃO NODEJS*"
+}

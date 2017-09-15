@@ -1,0 +1,14 @@
+{
+    "name": "NeoChatboxServer",
+    "version": "0.0.1",
+    "description": "Server",
+    "dependencies": {
+        "express": "^4.10.2",
+        "socket.io": "^1.4.0",
+        "mysql": "^2.5.4",
+        "cookie": "^0.1.2",
+	    "cookie-parser": "*",
+	    "cookieparser": "*",
+        "jsonfile": "*"
+    }
+}

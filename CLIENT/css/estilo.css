@@ -1,0 +1,155 @@
+/*USERVIEW -- BARRA LATERAL */
+
+.userView-container{
+  float: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.userView-avatar{
+display: inline-block;
+float:left;
+}
+
+.userView-rank{
+  color: #4CAF50;
+}
+
+.user-list-child{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.user-list-avatar{
+  height:100%;
+  width:auto;
+}
+
+.user-list-name {
+  position:absolute;
+  top:0;
+  margin-left:10px;
+}
+
+/*//////////////////////////////////////////*/
+
+/*MAIN -- BARRA PRINCIPAL */
+
+.main {
+  padding-left: 300px;
+  height:100vh;
+}
+
+@media only screen and (max-width : 992px) {
+  .main {
+    padding-left: 0;
+  }
+}
+
+/*//////////////////////////////////////////*/
+
+/*MAIN-TOP  */
+
+.main-top{
+  height:100px;
+  width:100%;
+}
+.options-button{
+ position: absolute;
+  right:15px;
+  top:0px;
+  bottom:calc(100vh - 360px);
+}
+
+/*//////////////////////////////////////////*/
+
+/*MESSAGE-COLUMN */
+
+.message-column{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height:calc(100% - 200px);
+  width:100%;
+}
+
+.message-name{
+  font-weight: 500;
+}
+
+.message-hour{
+ float:right;
+}
+
+.message-line{
+  word-break: break-all;
+}
+
+.generic-message{
+ color:white;
+ background-color:#F44336 !important;
+}
+
+/*//////////////////////////////////////////*/
+
+/*MAIN-BOTTOM */
+
+.main-bottom{
+  height:100px;
+  width:100%;
+}
+
+.input-field label {
+  color: #FFFFFF;
+}
+
+#inputdefault{
+  color:#FFFFFF;
+  max-width: calc(100% - 50px)
+}
+
+.emoji-button {
+    max-width:80px;
+    max-height: 80px;
+    position:absolute;
+    bottom:25px;
+    right:20px;
+}
+
+/*//////////////////////////////////////////*/
+
+/*MAIN-TOP */
+
+.promise-list{
+  color:#FFFFFF;
+  margin-top:40px;
+  margin-left:80px;
+  margin-right:80px;
+}
+
+/*//////////////////////////////////////////*/
+
+/*SCROLL */
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    /*  background-color: #eaeaea;
+    border-left: 1px solid #ccc;*/
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2A363B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2e2e2e;
+}
+
+/*//////////////////////////////////////////*/
